@@ -31,7 +31,7 @@ public class VarDisplay : MonoBehaviour {
     }
 
     private Person PickRandomPerson() {
-        int random = (int) UnityEngine.Random.Range(0f, 3f);
+        //int random = (int) UnityEngine.Random.Range(0f, 3f);
         //Debug.Log(random);
         return person1;
     }
