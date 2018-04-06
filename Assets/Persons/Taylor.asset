@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b33045d86fb9b142affd30ad8138a21, type: 3}
+  m_Name: Taylor
+  m_EditorClassIdentifier: 
+  firstName: Taylor
+  lastName: Jones
+  Jobb: Fotograf
+  Alder: 52
+  Sivilstatus: Skilt
+  Legning: Heterofil
+  Barn: "1 (Cameron, 16 \xE5r)"
+  "Kj\xF8nn": Mann
+  Interesser: "Natur, b\xE5t, fotografering"
+  "H\xF8yde": 179 cm
+  Kroppsbygning: Lubben
+  Bosted: "Troms\xF8"
+  Etnisitet: Norsk
+  Religion: Ateist
+  Parti: FRP
+  Familiemedlem: Cameron
+  Fremkomstmiddel: Bil
+  Feriehus: "Hytte p\xE5 Vengs\xF8ya"
+  "\xD8konomiskStatus": Under gjennomsnittet
+  "F\xF8dselsdato": 14.01.1966
+  Epost: ttjones@yahoo.com
+  Tlfnr: 66 11 82 92
+  "F\xF8dselssted": "Troms\xF8"
+  Sykdommer: Diabetes

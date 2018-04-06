@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b33045d86fb9b142affd30ad8138a21, type: 3}
+  m_Name: Cameron
+  m_EditorClassIdentifier: 
+  firstName: Cameron
+  lastName: Jones
+  Jobb: Elev
+  Alder: 16
+  Sivilstatus: Singel
+  Legning: Heterofil
+  Barn: null
+  "Kj\xF8nn": Kvinne
+  Interesser: 'Biologi, dataspill, matlaging, Tegning '
+  "H\xF8yde": 172 cm
+  Kroppsbygning: Spinkel
+  Bosted: "Troms\xF8"
+  Etnisitet: Norsk
+  Religion: Buddhist
+  Parti: "R\xF8dt"
+  Familiemedlem: Taylor
+  Fremkomstmiddel: Pappa, buss og sykkel
+  Feriehus: "Hytte p\xE5 Vengs\xF8ya"
+  "\xD8konomiskStatus": Under gjennomsnittet
+  "F\xF8dselsdato": 26.11.2002
+  Epost: CarmaJones@gmail.com
+  Tlfnr: 66 23 86 84
+  "F\xF8dselssted": "Troms\xF8"
+  Sykdommer: "Psoriasis Allergi (Hund, bj\xF8rk, gress, l\xF8vetann, o.s.v) "
