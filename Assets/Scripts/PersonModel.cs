@@ -6,9 +6,23 @@ class PersonModel {
     private List<string> allVariables;
     private List<string> unusedList;
 
+    //ResultVariables
+    private List<string> alignedVariables;
+
+    public Person Person {
+        get {
+            return person;
+        }
+
+        set {
+            person = value;
+        }
+    }
+
     public PersonModel(Person person) {
-        this.person = person;
+        this.Person = person;
         unusedList = getAllPersonVariables(person);
+        alignedVariables = new List<string>();
     }
 
     private List<string> getAllPersonVariables(Person person) {
@@ -40,11 +54,6 @@ class PersonModel {
         return allVariables;
     }
 
-    //private void AddUsedVariable(List<string> usedVariables) {
-    //    for (var i = 0; i < usedVariables.Count; i++) {
-    //        usedList.Add(usedVariables[i]);
-    //    }
-    //}
 
     public List<string> PickRandomVariables() {
         List<string> randomVariables = new List<string>();
@@ -70,6 +79,32 @@ class PersonModel {
     }
 
     public Person getPerson() {
-        return person;
+        return Person;
+    }
+
+    public List<string> getAlignedVariables() {
+        return alignedVariables;
+    }
+
+    public void AddAlignedVariables(string str) {
+        alignedVariables.Add(str);
+    }
+
+    public void RemoveAlignedVariables(string str) {
+        if (alignedVariables.Contains(str)) {
+            alignedVariables.Remove(str);
+        }
+    }
+
+    public int getNumberOfMatch() {
+        int i = 0;
+
+        foreach(string str in allVariables) {
+            if (alignedVariables.Contains(str)) {
+                i++;
+            }
+        }
+
+        return i;
     }
 }

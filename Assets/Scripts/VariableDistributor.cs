@@ -6,26 +6,11 @@ using UnityEngine.UI;
 
 public class VariableDistributor : MonoBehaviour {
 
-    public Person person1;
-    public Person person2;
-    public Person person3;
-    public Person person4;
-
-    private PersonModel personModel1;
-    private PersonModel personModel2;
-    private PersonModel personModel3;
-    private PersonModel personModel4;
-
     public Text Var1, Var2, Var3, Var4, Var5, Var6, Var7, Var8;
 
     private List<string> personVars;
 
     void Start () {
-
-        personModel1 = new PersonModel(person1);
-        personModel2 = new PersonModel(person2);
-        personModel3 = new PersonModel(person3);
-        personModel4 = new PersonModel(person4);
 
         GeneratePersonVarList();
         AssignVars();
@@ -34,10 +19,10 @@ public class VariableDistributor : MonoBehaviour {
     public void GeneratePersonVarList() {
         personVars = new List<string>();
 
-        AddStrPersonVars(personModel1);
-        AddStrPersonVars(personModel2);
-        AddStrPersonVars(personModel3);
-        AddStrPersonVars(personModel4);
+        AddStrPersonVars(Data.PersonModel1);
+        AddStrPersonVars(Data.PersonModel2);
+        AddStrPersonVars(Data.PersonModel3);
+        AddStrPersonVars(Data.PersonModel4);
     }
 
     private void AddStrPersonVars(PersonModel personModel) {

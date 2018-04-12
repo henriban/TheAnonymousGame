@@ -1,7 +1,8 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 [CreateAssetMenu(fileName = "New ShoppingList", menuName = "ShoppingList")]
-public class ShoppingList : ScriptableObject {
+public class ShoppingListItem : ScriptableObject {
 
     public string owner;
     public string list;

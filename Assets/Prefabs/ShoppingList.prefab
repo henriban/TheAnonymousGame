@@ -214,7 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ed00a4edf630b047858817f6512c2e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shoppingList: {fileID: 0}
+  shoppingList: {fileID: 11400000, guid: 1a01fc35e8df7fc49815612964736757, type: 2}
   ownerText: {fileID: 114010644456930382}
   listText: {fileID: 114475626198623260}
   totalCostText: {fileID: 114600843661966782}

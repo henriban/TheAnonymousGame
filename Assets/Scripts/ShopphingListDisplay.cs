@@ -1,15 +1,13 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class SopphingListDisplay : MonoBehaviour {
-
-    public ShoppingList shoppingList;
+public class ShopphingListDisplay : MonoBehaviour {
 
     public Text ownerText;
     public Text listText;
     public Text totalCostText;
 
-    void Start() {
+    public void Setup(ShoppingListItem shoppingList) {
 
         ownerText.text = shoppingList.owner;
         listText.text = shoppingList.list;
