@@ -12,26 +12,26 @@ MonoBehaviour:
   m_Name: Sam
   m_EditorClassIdentifier: 
   firstName: Sam
-  lastName: 
-  Jobb: Sykepleier/  Drag Queen
+  lastName: null
+  Jobb: Nurse/Drag Queen
   Alder: 28
-  Sivilstatus: Singel
-  Legning: Homofil
+  Sivilstatus: Single
+  Legning: Homosexual
   Barn: null
-  "Kj\xF8nn": Mann
-  Interesser: "Sminke, kl\xE6r, synge, sykling"
+  "Kj\xF8nn": Male
+  Interesser: Makeup, Clothes, Singing, Cycling
   "H\xF8yde": 185 cm
-  Kroppsbygning: Kraftig-lubben
+  Kroppsbygning: Overweight
   Bosted: Oslo
-  Etnisitet: Filipinsk-Norsk
-  Religion: Katolsk
-  Parti: MDG
+  Etnisitet: 'Filipino-Norwegian '
+  Religion: Catholic
+  Parti: The Environment Party
   Familiemedlem: null
-  Fremkomstmiddel: Sykkel
-  Feriehus: Familiehus i Cebu, Filippinene
-  "\xD8konomiskStatus": "Sykepleierl\xF8nn, gjennomsnittlig"
+  Fremkomstmiddel: Bicycle
+  Feriehus: Family house in Cebu, Filippinene
+  "\xD8konomiskStatus": Average economic status
   "F\xF8dselsdato": 04.02.1990
   Epost: Samantha.Snax@hotmail.com
   Tlfnr: +47 897 90 321
   "F\xF8dselssted": Trondheim
-  Sykdommer: "Migrene, R\xF8yke"
+  Sykdommer: Migraine, Smoking

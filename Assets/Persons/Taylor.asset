@@ -13,23 +13,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstName: Taylor
   lastName: Jones
-  Jobb: Fotograf
+  Jobb: Photograf
   Alder: 52
-  Sivilstatus: Skilt
-  Legning: Heterofil
-  Barn: "1 (Cameron, 16 \xE5r)"
-  "Kj\xF8nn": Mann
-  Interesser: "Natur, b\xE5t, fotografering"
+  Sivilstatus: Divorced
+  Legning: Heterosexual
+  Barn: 1 (Cameron, 16 yr)
+  "Kj\xF8nn": Male
+  Interesser: Nature, Boating, Photography
   "H\xF8yde": 179 cm
-  Kroppsbygning: Lubben
+  Kroppsbygning: Overweight
   Bosted: "Troms\xF8"
-  Etnisitet: Norsk
-  Religion: Ateist
-  Parti: FRP
+  Etnisitet: Norwegian
+  Religion: Atheist
+  Parti: Far Right Party
   Familiemedlem: Cameron
-  Fremkomstmiddel: Bil
-  Feriehus: "Hytte p\xE5 Vengs\xF8ya"
-  "\xD8konomiskStatus": Under gjennomsnittet
+  Fremkomstmiddel: Car
+  Feriehus: "Cabin at Vengs\xF8ya island"
+  "\xD8konomiskStatus": Lesser economic status
   "F\xF8dselsdato": 14.01.1966
   Epost: ttjones@yahoo.com
   Tlfnr: 66 11 82 92

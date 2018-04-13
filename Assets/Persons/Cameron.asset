@@ -13,25 +13,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstName: Cameron
   lastName: Jones
-  Jobb: Elev
+  Jobb: Student
   Alder: 16
-  Sivilstatus: Singel
-  Legning: Heterofil
+  Sivilstatus: Single
+  Legning: Heterosexual
   Barn: null
-  "Kj\xF8nn": Kvinne
-  Interesser: 'Biologi, dataspill, matlaging, Tegning '
+  "Kj\xF8nn": Female
+  Interesser: 'Biology, Cooking, Drawing '
   "H\xF8yde": 172 cm
-  Kroppsbygning: Spinkel
+  Kroppsbygning: Slender
   Bosted: "Troms\xF8"
-  Etnisitet: Norsk
+  Etnisitet: Norwegian
   Religion: Buddhist
-  Parti: "R\xF8dt"
+  Parti: The Communist party
   Familiemedlem: Taylor
-  Fremkomstmiddel: Pappa, buss og sykkel
-  Feriehus: "Hytte p\xE5 Vengs\xF8ya"
-  "\xD8konomiskStatus": Under gjennomsnittet
+  Fremkomstmiddel: Dad, Bus, Bicycle
+  Feriehus: "Cabin at Vengs\xF8ya island"
+  "\xD8konomiskStatus": Lesser economic status
   "F\xF8dselsdato": 26.11.2002
   Epost: CarmaJones@gmail.com
   Tlfnr: 66 23 86 84
   "F\xF8dselssted": "Troms\xF8"
-  Sykdommer: "Psoriasis Allergi (Hund, bj\xF8rk, gress, l\xF8vetann, o.s.v) "
+  Sykdommer: 'Psoriasis Allergy (Dog, Birch, Grass, etc.) '
