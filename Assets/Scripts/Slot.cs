@@ -4,12 +4,7 @@ using UnityEngine.UI;
 
 public class Slot : MonoBehaviour, IDropHandler {
 
-    private PersonModel personModel;
-
-    void SetUp(PersonModel personModel) {
-        Debug.Log("Start");
-        this.personModel = personModel;
-    }
+    //public DropZoneManager manager;
 
     public GameObject item {
         get {
@@ -26,11 +21,8 @@ public class Slot : MonoBehaviour, IDropHandler {
             DragHandler.itemBeingDraged.transform.SetParent(transform);
             ExecuteEvents.ExecuteHierarchy<IHasChanged>(gameObject, null, (x, y) => x.HasChanged());
             
-            //Find string value to items droped in dropZone
-            if (this.gameObject.tag == GameObject.FindGameObjectWithTag("Slot1").tag) {
-
-                Debug.Log(DragHandler.itemBeingDraged.transform.GetChild(0).gameObject.GetComponent<Text>().text);
-            }
         }
+
+        //manager.HandleDropChang();
     }
 }

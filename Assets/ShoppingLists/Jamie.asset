@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Name: Jamie
   m_EditorClassIdentifier: 
   owner: Jamie
-  list: Chips
+  list:
+  - Milke
   totalCost: 28
