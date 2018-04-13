@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Name: Cameron
   m_EditorClassIdentifier: 
   owner: Cameron
-  list: Cream
+  list:
+  - Beer
+  - Chips
   totalCost: 400

@@ -1,19 +1,31 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class SopphingListDisplay : MonoBehaviour {
-
-    public ShoppingList shoppingList;
+public class ShopphingListDisplay : MonoBehaviour {
 
     public Text ownerText;
-    public Text listText;
+    public Transform listText;
     public Text totalCostText;
 
-    void Start() {
+    public GameObject textObject;
+
+    public void Setup(ShoppingListItem shoppingList) {
 
         ownerText.text = shoppingList.owner;
-        listText.text = shoppingList.list;
+
+        foreach(string item in shoppingList.list) {
+           
+            GameObject newText = (GameObject)Instantiate(textObject);
+           
+            Text theText = newText.transform.GetComponent<Text>();
+            
+            theText.text = item;
+
+            newText.transform.SetParent(listText);
+        }
+
         totalCostText.text = shoppingList.totalCost.ToString() + "kr";
 
+        transform.localScale = new Vector3(1, 1, 1); // Forc to dont scale
     }
 }

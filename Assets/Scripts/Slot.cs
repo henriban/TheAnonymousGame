@@ -1,7 +1,10 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class Slot : MonoBehaviour, IDropHandler {
+
+    //public DropZoneManager manager;
 
     public GameObject item {
         get {
@@ -14,13 +17,12 @@ public class Slot : MonoBehaviour, IDropHandler {
 
     public void OnDrop(PointerEventData eventData) {
 
-        if (!item) {
+        if (!item) {   
             DragHandler.itemBeingDraged.transform.SetParent(transform);
             ExecuteEvents.ExecuteHierarchy<IHasChanged>(gameObject, null, (x, y) => x.HasChanged());
+            
         }
-    }
 
-    void OnMouseEnter() {
-        Debug.Log("HEI");    
+        //manager.HandleDropChang();
     }
 }

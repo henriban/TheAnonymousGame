@@ -41,7 +41,6 @@ GameObject:
   - component: {fileID: 225369240919309322}
   - component: {fileID: 114290073155814198}
   - component: {fileID: 114415124438187122}
-  - component: {fileID: 114740009435010014}
   m_Layer: 5
   m_Name: Variable
   m_TagString: Untagged
@@ -83,23 +82,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56cdb71b90bc90d4da6736c6eb849d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114740009435010014
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1892360916702050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16077ef3d27edb546ad46db80431e346, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  person1: {fileID: 11400000, guid: 34877d16818d93b48a214d9f48bb89aa, type: 2}
-  person2: {fileID: 11400000, guid: 8d9b8b5c6dfd9834b8370ef57f07c393, type: 2}
-  person3: {fileID: 11400000, guid: db7cdcaf670360047b894e523aa77061, type: 2}
-  person4: {fileID: 11400000, guid: b07ac3833bb8b22488b1b32868c814cf, type: 2}
-  persons: []
-  varText: {fileID: 114971214548982670}
 --- !u!114 &114913175273569658
 MonoBehaviour:
   m_ObjectHideFlags: 1

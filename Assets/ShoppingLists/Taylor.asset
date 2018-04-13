@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Name: Taylor
   m_EditorClassIdentifier: 
   owner: Taylor
-  list: Milk
-  totalCost: 21
+  list:
+  - BIXIT
+  totalCost: 18

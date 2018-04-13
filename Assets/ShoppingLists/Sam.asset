@@ -12,5 +12,9 @@ MonoBehaviour:
   m_Name: Sam
   m_EditorClassIdentifier: 
   owner: Sam
-  list: Beer
+  list:
+  - Beans
+  - Lorum
+  - Ipsum
+  - Dipsum
   totalCost: 210
