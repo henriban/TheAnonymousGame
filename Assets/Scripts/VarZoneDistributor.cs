@@ -54,12 +54,6 @@ public class VarZoneDistributor : MonoBehaviour {
             varText.transform.GetComponent<Text>().text = personVars[i];
         }
 
-        //foreach (GameObject slot in variableSlotList) {
-        //    Transform var = slot.transform.GetChild(0);
-        //    Transform varText = var.transform.GetChild(0);
-
-        //}
+        //Data.VarZoneVariableSlots = variableSlotList;
     }
-
-
 }

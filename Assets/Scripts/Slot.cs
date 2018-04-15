@@ -1,10 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
 
 public class Slot : MonoBehaviour, IDropHandler {
-
-    
 
     public GameObject item {
         get {
@@ -25,9 +22,6 @@ public class Slot : MonoBehaviour, IDropHandler {
 
         if(gameObject.transform.parent.GetComponent<DropZoneManager>() != null) {
             gameObject.transform.parent.GetComponent<DropZoneManager>().HandleDropChang();
-        }
-        else {
-            Debug.Log("did not find script");
         }
     }
 }

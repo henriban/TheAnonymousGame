@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -58,5 +59,20 @@ public class DropZoneManager : MonoBehaviour {
                 }
             }
         }
+
+
+        //checkShowOfferButton();
+        
     }
+
+    // Return true if all variables is distributed
+    //private bool checkShowOfferButton() {
+    //    foreach (GameObject slot in Data.VarZoneVariableSlots) {
+    //        if (slot.transform.GetChild(0) != null) {
+    //            return false;
+    //        }
+    //    }
+
+    //    return true;
+    //}
 }
