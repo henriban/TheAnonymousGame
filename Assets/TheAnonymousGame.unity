@@ -1895,6 +1895,7 @@ MonoBehaviour:
   varZonePanel: {fileID: 1863885390}
   variableSlot: {fileID: 1873962872207016, guid: e9950c6de9366ed4fb341459ffc43e98,
     type: 2}
+  var_prefab: {fileID: 1892360916702050, guid: 2b9bb4ace4550494795df355e763b260, type: 2}
 --- !u!114 &1930603157 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114199103907567932, guid: d0de638f5aa1e6643813d12d2cd07dcf,
@@ -2018,6 +2019,7 @@ GameObject:
   - component: {fileID: 2057598196}
   - component: {fileID: 2057598197}
   - component: {fileID: 2057598198}
+  - component: {fileID: 2057598199}
   m_Layer: 5
   m_Name: PublicBoard
   m_TagString: Untagged
@@ -2080,6 +2082,19 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &2057598199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2057598195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a866a85aeebb8a147b7de6e081639cd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropZone: {fileID: 2109782371}
+  varZone: {fileID: 1863885390}
 --- !u!1 &2069921424
 GameObject:
   m_ObjectHideFlags: 0
@@ -2302,3 +2317,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentPanel: {fileID: 2109782370}
   slotPrefab: {fileID: 1654137927903050, guid: 28195cd43ee60ac4b9046122f6f8642d, type: 2}
+  var_prefab: {fileID: 1892360916702050, guid: 2b9bb4ace4550494795df355e763b260, type: 2}

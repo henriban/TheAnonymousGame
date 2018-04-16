@@ -7,18 +7,33 @@ public class DropZoneManager : MonoBehaviour {
 
     public GameObject parentPanel;
     public GameObject slotPrefab;
+	private List<GameObject> slots = new List<GameObject>();
+	public GameObject var_prefab;
 
     void Start() {
         SpawnNewTurnOfSlots();
         HandleDropChang();
     }
 
+	public void RemoveFromSlot(int index){
+		slots [index].transform.DetachChildren ();
+	}
+
+	public void PopulateSlot(int index, string var_name){
+		RemoveFromSlot (index);
+		GameObject new_var = Instantiate (var_prefab);
+		new_var.transform.SetParent (slots [index].transform);
+		new_var.transform.GetChild (0).transform.GetComponent<Text> ().text = var_name;
+		new_var.transform.localScale = new Vector3 (1, 1, 1);
+	}
+
+
     public void SpawnNewTurnOfSlots() {
         for(var i = 0; i < 8; i++) {
             
             GameObject slot = Instantiate(slotPrefab, parentPanel.transform, parentPanel);
             slot.transform.localScale = new Vector3(1, 1, 1);
-
+			slots.Add (slot);
         }
     }
 
@@ -38,21 +53,23 @@ public class DropZoneManager : MonoBehaviour {
                     Transform textVar = var.transform.GetChild(0);
                     string str = textVar.GetComponent<Text>().text;
 
-                    int mod = i % 4;
+					int x = i % 4;
+					int y = i / 4;
 
-                    if(mod == 0) {
+
+                    if(x == 0) {
                         Data.PersonModel1.AddAlignedVariables(str);
                         //Debug.Log("P1: " + Data.PersonModel1.getNumberOfMatch());
                     }
-                    else if (mod == 1) {
+                    else if (x == 1) {
                         Data.PersonModel2.AddAlignedVariables(str);
                         //Debug.Log("P2: " + Data.PersonModel2.getNumberOfMatch());
                     }
-                    else if (mod == 2) {
+                    else if (x == 2) {
                         Data.PersonModel3.AddAlignedVariables(str);
                         //Debug.Log("P3: " + Data.PersonModel3.getNumberOfMatch());
                     }
-                    else if (mod == 3) {
+                    else if (x == 3) {
                         Data.PersonModel4.AddAlignedVariables(str);
                         //Debug.Log("P4: " + Data.PersonModel4.getNumberOfMatch());
                     }
