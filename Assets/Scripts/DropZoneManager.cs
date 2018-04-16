@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class DropZoneManager : MonoBehaviour {
@@ -21,11 +23,57 @@ public class DropZoneManager : MonoBehaviour {
     }
 
     public void HandleDropChang() {
-        for(int i = 0; i < parentPanel.transform.childCount; i++) {
+
+        // Resets aligned variables
+        Data.PersonModel1.AlignedVariables = new List<string>();
+        Data.PersonModel2.AlignedVariables = new List<string>();
+        Data.PersonModel3.AlignedVariables = new List<string>();
+        Data.PersonModel4.AlignedVariables = new List<string>();
+
+        for (int i = 0; i < parentPanel.transform.childCount; i++) {
             if(parentPanel.transform.GetChild(i) != null) {
-                Debug.Log(parentPanel.transform.GetChild(i).childCount);
-                //Debug.Log(parentPanel.transform.GetChild(i).GetChild(0).GetComponent<Text>());
+                Transform slot = parentPanel.transform.GetChild(i);
+                if(slot.transform.childCount > 0) {
+                    Transform var = slot.transform.GetChild(0);
+                    Transform textVar = var.transform.GetChild(0);
+                    string str = textVar.GetComponent<Text>().text;
+
+                    int mod = i % 4;
+
+                    if(mod == 0) {
+                        Data.PersonModel1.AddAlignedVariables(str);
+                        //Debug.Log("P1: " + Data.PersonModel1.getNumberOfMatch());
+                    }
+                    else if (mod == 1) {
+                        Data.PersonModel2.AddAlignedVariables(str);
+                        //Debug.Log("P2: " + Data.PersonModel2.getNumberOfMatch());
+                    }
+                    else if (mod == 2) {
+                        Data.PersonModel3.AddAlignedVariables(str);
+                        //Debug.Log("P3: " + Data.PersonModel3.getNumberOfMatch());
+                    }
+                    else if (mod == 3) {
+                        Data.PersonModel4.AddAlignedVariables(str);
+                        //Debug.Log("P4: " + Data.PersonModel4.getNumberOfMatch());
+                    }
+                }
             }
         }
+
+
+        //Debug.Log(checkShowOfferButton());
+        
+    }
+
+    //Return true if all variables is distributed
+    private bool checkShowOfferButton() {
+        //for (int i = 0; i < parentPanel.transform.childCount; i++) {
+        //    Transform var = parentPanel.transform.GetChild(i);
+        //    if (var.GetChild(0) == null) {
+        //        return false;
+        //    }
+        //}
+
+        return true;
     }
 }

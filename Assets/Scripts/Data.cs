@@ -1,10 +1,15 @@
 ﻿
-public static class Data  {
+using System.Collections.Generic;
+using UnityEngine;
+
+public static class Data {
 
     private static PersonModel personModel1;
     private static PersonModel personModel2;
     private static PersonModel personModel3;
     private static PersonModel personModel4;
+
+
 
     internal static PersonModel PersonModel1 {
         get {
@@ -45,4 +50,5 @@ public static class Data  {
             personModel4 = value;
         }
     }
+
 }
