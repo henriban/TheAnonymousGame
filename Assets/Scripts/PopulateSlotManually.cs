@@ -28,4 +28,11 @@ public class PopulateSlotManually : MonoBehaviour {
 		}
 	}
 
+	void Update(){
+		if (Input.GetKeyDown (KeyCode.Space)) {
+			PopulateSlot (1, 0, "XD", false);
+			PopulateSlot (0, 0, "Lol", false);
+		}
+	}
+
 }

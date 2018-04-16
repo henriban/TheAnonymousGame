@@ -15,12 +15,28 @@ public class DropZoneManager : MonoBehaviour {
         HandleDropChang();
     }
 
-	public void RemoveFromSlot(int index){
+	public string RemoveFromSlot(int index){
+		string name = slots [index].transform.GetChild (0).transform.GetChild (0).GetComponent<Text> ().text;
 		slots [index].transform.DetachChildren ();
+
+		return name;
 	}
 
 	public void PopulateSlot(int index, string var_name){
-		RemoveFromSlot (index);
+
+		int curr_index = 0;
+
+		if (index == -1) {
+			
+			foreach (GameObject go in slots) {
+				if (go.transform.childCount == 0) {
+					index = curr_index;
+					break;
+				}
+				curr_index++;
+			}
+		}
+
 		GameObject new_var = Instantiate (var_prefab);
 		new_var.transform.SetParent (slots [index].transform);
 		new_var.transform.GetChild (0).transform.GetComponent<Text> ().text = var_name;
@@ -40,6 +56,9 @@ public class DropZoneManager : MonoBehaviour {
     public void HandleDropChang() {
 
         // Resets aligned variables
+
+		Debug.Log ("Dropped in dropzone");
+
         Data.PersonModel1.AlignedVariables = new List<string>();
         Data.PersonModel2.AlignedVariables = new List<string>();
         Data.PersonModel3.AlignedVariables = new List<string>();
@@ -56,6 +75,9 @@ public class DropZoneManager : MonoBehaviour {
 					int x = i % 4;
 					int y = i / 4;
 
+					Debug.Log ("Dropped on person " + x);
+
+					//Call networked class which calls Populate manually on the other clients
 
                     if(x == 0) {
                         Data.PersonModel1.AddAlignedVariables(str);

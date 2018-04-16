@@ -23,11 +23,32 @@ public class VarZoneDistributor : MonoBehaviour {
 		global_id = 0;
 	}
 
-	public void RemoveFromSlot(int index){
+	public void HandleDropChange(){
+		Debug.Log ("Dropped in varzone");
+	}
+
+	public string RemoveFromSlot(int index){
+		string name = variableSlotList [index].transform.GetChild (0).transform.GetChild (0).GetComponent<Text> ().text;
 		variableSlotList [index].transform.DetachChildren ();
+
+		return name;
 	}
 
 	public void PopulateSlot(int index, string var_name){
+
+		int curr_index = 0;
+
+		if (index == -1) {
+
+			foreach (GameObject go in variableSlotList) {
+				if (go.transform.childCount == 0) {
+					index = curr_index;
+					break;
+				}
+				curr_index++;
+			}
+		}
+
 		GameObject new_var = Instantiate (var_prefab);
 		new_var.transform.SetParent (variableSlotList [index].transform);
 		new_var.transform.GetChild (0).transform.GetComponent<Text> ().text = var_name;
