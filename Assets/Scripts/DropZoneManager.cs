@@ -61,18 +61,19 @@ public class DropZoneManager : MonoBehaviour {
         }
 
 
-        //checkShowOfferButton();
+        //Debug.Log(checkShowOfferButton());
         
     }
 
-    // Return true if all variables is distributed
-    //private bool checkShowOfferButton() {
-    //    foreach (GameObject slot in Data.VarZoneVariableSlots) {
-    //        if (slot.transform.GetChild(0) != null) {
-    //            return false;
-    //        }
-    //    }
+    //Return true if all variables is distributed
+    private bool checkShowOfferButton() {
+        //for (int i = 0; i < parentPanel.transform.childCount; i++) {
+        //    Transform var = parentPanel.transform.GetChild(i);
+        //    if (var.GetChild(0) == null) {
+        //        return false;
+        //    }
+        //}
 
-    //    return true;
-    //}
+        return true;
+    }
 }
