@@ -15,6 +15,8 @@ public class ReceiptDistributor : MonoBehaviour {
     void Start() {
         GenerateReceiptImages();
         PopulateReceiptImages();
+
+
     }
 
     public void GenerateReceiptImages() {

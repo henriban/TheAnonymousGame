@@ -56,9 +56,6 @@ public class DropZoneManager : MonoBehaviour {
     public void HandleDropChang() {
 
         // Resets aligned variables
-
-		Debug.Log ("Dropped in dropzone");
-
         Data.PersonModel1.AlignedVariables = new List<string>();
         Data.PersonModel2.AlignedVariables = new List<string>();
         Data.PersonModel3.AlignedVariables = new List<string>();
@@ -75,7 +72,7 @@ public class DropZoneManager : MonoBehaviour {
 					int x = i % 4;
 					int y = i / 4;
 
-					Debug.Log ("Dropped on person " + x);
+					//Debug.Log ("Dropped on person " + x);
 
 					//Call networked class which calls Populate manually on the other clients
 

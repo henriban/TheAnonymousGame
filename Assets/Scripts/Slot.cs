@@ -20,9 +20,11 @@ public class Slot : MonoBehaviour, IDropHandler {
          	
 			if (gameObject.transform.parent.GetComponent<DropZoneManager> () != null) {
 				gameObject.transform.parent.GetComponent<DropZoneManager> ().HandleDropChang ();
-			} else {
+            } else {
 				gameObject.transform.parent.GetComponent<VarZoneDistributor> ().HandleDropChange ();
 			}
+
+            GameObject.Find("VarZone").GetComponent<VarZoneDistributor>().CheckOfferButton();
         }
     }
 }

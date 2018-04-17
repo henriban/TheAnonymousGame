@@ -25,6 +25,7 @@ public class VarZoneDistributor : MonoBehaviour {
 
 	public void HandleDropChange(){
 		Debug.Log ("Dropped in varzone");
+        CheckOfferButton();
 	}
 
 	public string RemoveFromSlot(int index){
@@ -97,5 +98,24 @@ public class VarZoneDistributor : MonoBehaviour {
         }
 
         //Data.VarZoneVariableSlots = variableSlotList;
+    }
+
+    public void CheckOfferButton() {
+        if (IsOfferButtonClikable()) {
+            GameObject.Find("GameManger").GetComponent<DisplayOfferPanel>().SetOfferButtonClickable();
+        }
+        else {
+            GameObject.Find("GameManger").GetComponent<DisplayOfferPanel>().SetOfferButtonNotClickable();
+        }
+    }
+
+    //Check if it variable left in the VarZone
+    private bool IsOfferButtonClikable() {
+        foreach(GameObject slot in variableSlotList) {
+            if(slot.transform.childCount > 0) {
+                return false;
+            }
+        }
+        return true;
     }
 }
