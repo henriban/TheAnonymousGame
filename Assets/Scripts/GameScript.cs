@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 
 public class GameScript : MonoBehaviour {
@@ -10,31 +11,30 @@ public class GameScript : MonoBehaviour {
 
     [SerializeField] Transform slots;
 
-	// Use this for initialization
-	void Start () {
+    [Header("Turn 1 (Sam, Taylor, Jamie, Cameron)")]
+    public List<Sprite> recipts_Player1_Turn1;
+    public List<Sprite> recipts_Player2_Turn1;
+
+    [Header("Turn 2")]
+    public List<Sprite> recipts_Player1_Turn2;
+    public List<Sprite> recipts_Player2_Turn2;
+
+    [Header("Turn 3")]
+    public List<Sprite> recipts_Player1_Turn3;
+    public List<Sprite> recipts_Player2_Turn3;
+
+    [Header("Turn 4")]
+    public List<Sprite> recipts_Player1_Turn4;
+    public List<Sprite> recipts_Player2_Turn4;
+
+
+    // Use this for initialization
+    void Start() {
 
         Data.PersonModel1 = new PersonModel(person1);
         Data.PersonModel2 = new PersonModel(person2);
         Data.PersonModel3 = new PersonModel(person3);
         Data.PersonModel4 = new PersonModel(person4);
 
-        HasChanged();		
-	}
-
-    public void HasChanged() {
-
-        foreach(Transform slotTransform in slots) {
-            GameObject item = slotTransform.GetComponent<Slot>().item;
-            if (item) {
-                Debug.Log(item.name);
-            }
-        }
-    }
-
-}
-
-namespace UnityEngine.EventSystems {
-    public interface IHasChanged : IEventSystemHandler {
-        void HasChanged();
     }
 }

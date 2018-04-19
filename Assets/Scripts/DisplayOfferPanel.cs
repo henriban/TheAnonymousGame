@@ -15,12 +15,20 @@ public class DisplayOfferPanel : MonoBehaviour {
     private ColorBlock offerButtonColor;
 
     void Start() {
-        continueButton.onClick.AddListener(ClickOfferPanel);
+        continueButton.onClick.AddListener(Continue);
 
         offerButtonColor = offerButton.GetComponent<Button>().colors;
 
         offerButtonColor.normalColor = Color.gray;
         offerButton.GetComponent<Button>().colors = offerButtonColor;
+    }
+
+    private void Continue() {
+        GameObject.Find("DropeZone").GetComponent<DropZoneManager>().SpawnNewTurnOfSlots();
+        GameObject.Find("VarZone").GetComponent<VarZoneDistributor>().NewTurn();
+        GameObject.Find("VarZone").GetComponent<VarZoneDistributor>().CheckOfferButton();
+
+        ClickOfferPanel();
     }
 
     public void ClickOfferPanel() {

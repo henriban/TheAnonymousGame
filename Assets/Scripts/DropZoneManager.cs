@@ -95,21 +95,5 @@ public class DropZoneManager : MonoBehaviour {
                 }
             }
         }
-
-
-        //Debug.Log(checkShowOfferButton());
-        
-    }
-
-    //Return true if all variables is distributed
-    private bool checkShowOfferButton() {
-        //for (int i = 0; i < parentPanel.transform.childCount; i++) {
-        //    Transform var = parentPanel.transform.GetChild(i);
-        //    if (var.GetChild(0) == null) {
-        //        return false;
-        //    }
-        //}
-
-        return true;
     }
 }

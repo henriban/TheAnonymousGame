@@ -1076,6 +1076,7 @@ GameObject:
   m_Component:
   - component: {fileID: 430450674}
   - component: {fileID: 430450677}
+  - component: {fileID: 430450673}
   m_Layer: 0
   m_Name: GameManger
   m_TagString: Untagged
@@ -1083,6 +1084,62 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &430450673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 430450672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22ded5a2d23f3de41bac6aa060e1e4fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  person1: {fileID: 11400000, guid: db7cdcaf670360047b894e523aa77061, type: 2}
+  person2: {fileID: 11400000, guid: b07ac3833bb8b22488b1b32868c814cf, type: 2}
+  person3: {fileID: 11400000, guid: 8d9b8b5c6dfd9834b8370ef57f07c393, type: 2}
+  person4: {fileID: 11400000, guid: 34877d16818d93b48a214d9f48bb89aa, type: 2}
+  slots: {fileID: 2109782371}
+  recipts_Player1_Turn1:
+  - {fileID: 21300000, guid: e7797e36ab611a04aabcb7e130096948, type: 3}
+  - {fileID: 21300000, guid: 7f0d5715e443f2a4fb06bf5deb591828, type: 3}
+  - {fileID: 0}
+  - {fileID: 21300000, guid: 594c059763fcd394ba377b59970fe275, type: 3}
+  recipts_Player2_Turn1:
+  - {fileID: 21300000, guid: a869607e9f5938b4e844e369adb3d510, type: 3}
+  - {fileID: 21300000, guid: 3b420574a1347c844a884b946571277a, type: 3}
+  - {fileID: 21300000, guid: 20dbc481109a24a43b29cf3bcd414ba8, type: 3}
+  - {fileID: 21300000, guid: bba723cdc94fc3f428866edec2811101, type: 3}
+  recipts_Player1_Turn2:
+  - {fileID: 21300000, guid: a44e5c5136c0da24b8c091d78d5c1bb0, type: 3}
+  - {fileID: 21300000, guid: 71d1c7499b311a54ba804425b3031200, type: 3}
+  - {fileID: 0}
+  - {fileID: 21300000, guid: 70745451bcf9320488c1ad11fa845972, type: 3}
+  recipts_Player2_Turn2:
+  - {fileID: 21300000, guid: 6d84cba566208aa4591caef7af106891, type: 3}
+  - {fileID: 21300000, guid: bbb64219dce6f324d9b6b5a304d75b1c, type: 3}
+  - {fileID: 21300000, guid: 3ca87b5a7701a6140b5947a632c782f1, type: 3}
+  - {fileID: 0}
+  recipts_Player1_Turn3:
+  - {fileID: 21300000, guid: 199cfc43be652f645b24c89608584b50, type: 3}
+  - {fileID: 21300000, guid: 3b420574a1347c844a884b946571277a, type: 3}
+  - {fileID: 21300000, guid: dd8758b33771a9d48a10677481b45ba5, type: 3}
+  - {fileID: 21300000, guid: c57cac3f3578c9747a655fcbe8ca8d82, type: 3}
+  recipts_Player2_Turn3:
+  - {fileID: 21300000, guid: 700505f509f8e914683bf0f22b8009bc, type: 3}
+  - {fileID: 21300000, guid: 2320f7e9638ed3b40bf23dc8bdab5c93, type: 3}
+  - {fileID: 0}
+  - {fileID: 21300000, guid: c57cac3f3578c9747a655fcbe8ca8d82, type: 3}
+  recipts_Player1_Turn4:
+  - {fileID: 21300000, guid: d218bdb6001b4984ab30fee92a767cb0, type: 3}
+  - {fileID: 0}
+  - {fileID: 21300000, guid: dd8758b33771a9d48a10677481b45ba5, type: 3}
+  - {fileID: 21300000, guid: 2db1d759fc221cc4da1dd922d40f9797, type: 3}
+  recipts_Player2_Turn4:
+  - {fileID: 21300000, guid: adc89ee672ae27b4cb40b06e5fc54a17, type: 3}
+  - {fileID: 21300000, guid: 28f77f420a8f99f47b9688878fb0bcd6, type: 3}
+  - {fileID: 0}
+  - {fileID: 21300000, guid: 594c059763fcd394ba377b59970fe275, type: 3}
 --- !u!4 &430450674
 Transform:
   m_ObjectHideFlags: 0
@@ -1225,7 +1282,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 785264542}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 22ded5a2d23f3de41bac6aa060e1e4fd, type: 3}
   m_Name: 
@@ -1235,6 +1292,14 @@ MonoBehaviour:
   person3: {fileID: 11400000, guid: 8d9b8b5c6dfd9834b8370ef57f07c393, type: 2}
   person4: {fileID: 11400000, guid: 34877d16818d93b48a214d9f48bb89aa, type: 2}
   slots: {fileID: 2109782371}
+  recipts_Player1_Turn1: []
+  recipts_Player2_Turn1: []
+  recipts_Player1_Turn2: []
+  recipts_Player2_Turn2: []
+  recipts_Player1_Turn3: []
+  recipts_Player2_Turn3: []
+  recipts_Player1_Turn4: []
+  recipts_Player2_Turn4: []
 --- !u!1 &891051099
 GameObject:
   m_ObjectHideFlags: 0

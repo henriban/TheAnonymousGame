@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEditor;
 
 public class VarZoneDistributor : MonoBehaviour {
 
@@ -22,6 +21,13 @@ public class VarZoneDistributor : MonoBehaviour {
 		
 		global_id = 0;
 	}
+
+    public void NewTurn() {
+        RemoveAllVariableSlots();
+        GeneratePersonVarList();
+        GenerateVariableSlots();
+        PopulateVariableSlots();
+    }
 
 	public void HandleDropChange(){
 		Debug.Log ("Dropped in varzone");
@@ -83,14 +89,21 @@ public class VarZoneDistributor : MonoBehaviour {
         }
     }
 
+    private void RemoveAllVariableSlots() {
+        foreach(GameObject slot in variableSlotList) {
+            Destroy(slot);
+        }
+        variableSlotList = new List<GameObject>();
+    }
+
     private void PopulateVariableSlots() {
         System.Random rand = new System.Random();
         personVars.OrderBy(c => rand.Next()).ToList();
 
         for(int i = 0; i < variableSlotList.Count; i++) {
             Transform var = variableSlotList[i].transform.GetChild(0);
-
-			var.transform.name = "var" + global_id;
+            
+            var.transform.name = "var" + global_id;
 
             Transform varText = var.transform.GetChild(0);
             varText.transform.GetComponent<Text>().text = personVars[i];
