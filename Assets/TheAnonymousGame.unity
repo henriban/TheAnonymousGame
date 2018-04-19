@@ -305,7 +305,7 @@ RectTransform:
   m_Children:
   - {fileID: 168758236}
   m_Father: {fileID: 1762608844}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -502,89 +502,6 @@ Prefab:
     - {fileID: 114501809325275716, guid: d0de638f5aa1e6643813d12d2cd07dcf, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: d0de638f5aa1e6643813d12d2cd07dcf, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &156099303
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 156099304}
-  - component: {fileID: 156099306}
-  - component: {fileID: 156099305}
-  - component: {fileID: 156099307}
-  m_Layer: 5
-  m_Name: ShoppingListPanel
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &156099304
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 156099303}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1762608844}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.000015258302}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &156099305
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 156099303}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -2095666955, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Padding:
-    m_Left: 0
-    m_Right: 0
-    m_Top: 0
-    m_Bottom: 0
-  m_ChildAlignment: 4
-  m_StartCorner: 0
-  m_StartAxis: 0
-  m_CellSize: {x: 98, y: 250}
-  m_Spacing: {x: 5, y: 5}
-  m_Constraint: 2
-  m_ConstraintCount: 2
---- !u!222 &156099306
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 156099303}
---- !u!114 &156099307
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 156099303}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44f1345fc1de3f24199292bcb8c61c39, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  listToDisplay:
-  - {fileID: 11400000, guid: 1a01fc35e8df7fc49815612964736757, type: 2}
-  - {fileID: 11400000, guid: ead985a087f82964b9f280bc534cbe08, type: 2}
-  - {fileID: 11400000, guid: ae09eb697c119e0499bc754fe4365f8e, type: 2}
-  - {fileID: 11400000, guid: 07acd03bbcac05d4f85cebeaf7cb53ba, type: 2}
-  shoppingListPanel: {fileID: 156099304}
-  shoppinglistObjectPool: {fileID: 891051100}
 --- !u!1 &168758235
 GameObject:
   m_ObjectHideFlags: 0
@@ -598,7 +515,7 @@ GameObject:
   - component: {fileID: 168758237}
   - component: {fileID: 168758240}
   m_Layer: 5
-  m_Name: Content
+  m_Name: ReceiptContent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -639,7 +556,7 @@ MonoBehaviour:
     m_Top: 10
     m_Bottom: 0
   m_ChildAlignment: 1
-  m_Spacing: 10
+  m_Spacing: 5
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
@@ -691,11 +608,9 @@ MonoBehaviour:
   contentPanel: {fileID: 168758236}
   imagePrefab: {fileID: 1928334827879314, guid: 81011d6484b1de247bae3d173db92186,
     type: 2}
-  images:
-  - {fileID: 21300000, guid: 594c059763fcd394ba377b59970fe275, type: 3}
-  - {fileID: 21300000, guid: b3c2f8f75d4b87a4e8012a8c1f195b3d, type: 3}
-  - {fileID: 21300000, guid: 70745451bcf9320488c1ad11fa845972, type: 3}
-  - {fileID: 21300000, guid: 2db1d759fc221cc4da1dd922d40f9797, type: 3}
+  recieptOwnerTextPrefab: {fileID: 1422069657762852, guid: 2d273caa7bd016c4184716c9858e5dd5,
+    type: 2}
+  player: 1
 --- !u!1 &217698517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1103,33 +1018,60 @@ MonoBehaviour:
   recipts_Player1_Turn1:
   - {fileID: 21300000, guid: e7797e36ab611a04aabcb7e130096948, type: 3}
   - {fileID: 21300000, guid: 7f0d5715e443f2a4fb06bf5deb591828, type: 3}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: 88a22040191d3704ba61082094b7186e, type: 3}
   - {fileID: 21300000, guid: 594c059763fcd394ba377b59970fe275, type: 3}
   recipts_Player2_Turn1:
   - {fileID: 21300000, guid: a869607e9f5938b4e844e369adb3d510, type: 3}
   - {fileID: 21300000, guid: 3b420574a1347c844a884b946571277a, type: 3}
   - {fileID: 21300000, guid: 20dbc481109a24a43b29cf3bcd414ba8, type: 3}
   - {fileID: 21300000, guid: bba723cdc94fc3f428866edec2811101, type: 3}
+  variables_Turn1:
+  - 'Interest: Makeup'
+  - 'Interest: Fashion'
+  - Atheist
+  - 'Diabetes '
+  - 'Child: 2 years'
+  - 'Ethnicity: American'
+  - Pollen allergy
+  - 'Student '
   recipts_Player1_Turn2:
   - {fileID: 21300000, guid: a44e5c5136c0da24b8c091d78d5c1bb0, type: 3}
   - {fileID: 21300000, guid: 71d1c7499b311a54ba804425b3031200, type: 3}
-  - {fileID: 0}
-  - {fileID: 21300000, guid: 70745451bcf9320488c1ad11fa845972, type: 3}
+  - {fileID: 21300000, guid: 3ca87b5a7701a6140b5947a632c782f1, type: 3}
+  - {fileID: 21300000, guid: c57cac3f3578c9747a655fcbe8ca8d82, type: 3}
   recipts_Player2_Turn2:
   - {fileID: 21300000, guid: 6d84cba566208aa4591caef7af106891, type: 3}
   - {fileID: 21300000, guid: bbb64219dce6f324d9b6b5a304d75b1c, type: 3}
-  - {fileID: 21300000, guid: 3ca87b5a7701a6140b5947a632c782f1, type: 3}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: 88a22040191d3704ba61082094b7186e, type: 3}
+  - {fileID: 21300000, guid: b3c2f8f75d4b87a4e8012a8c1f195b3d, type: 3}
+  variables_Turn2:
+  - Male
+  - Smoker
+  - Cabin
+  - 'Child: 16 years'
+  - 'Interest: Yoga'
+  - 'From: Oslo'
+  - Vegetarian
+  - Female
   recipts_Player1_Turn3:
   - {fileID: 21300000, guid: 199cfc43be652f645b24c89608584b50, type: 3}
   - {fileID: 21300000, guid: 3b420574a1347c844a884b946571277a, type: 3}
   - {fileID: 21300000, guid: dd8758b33771a9d48a10677481b45ba5, type: 3}
-  - {fileID: 21300000, guid: c57cac3f3578c9747a655fcbe8ca8d82, type: 3}
+  - {fileID: 21300000, guid: 70745451bcf9320488c1ad11fa845972, type: 3}
   recipts_Player2_Turn3:
-  - {fileID: 21300000, guid: 700505f509f8e914683bf0f22b8009bc, type: 3}
+  - {fileID: 21300000, guid: 5c76146b8903b4246936af280a825e9b, type: 3}
   - {fileID: 21300000, guid: 2320f7e9638ed3b40bf23dc8bdab5c93, type: 3}
   - {fileID: 0}
-  - {fileID: 21300000, guid: c57cac3f3578c9747a655fcbe8ca8d82, type: 3}
+  - {fileID: 21300000, guid: 2db1d759fc221cc4da1dd922d40f9797, type: 3}
+  variables_Turn3:
+  - The Environment Party
+  - Average economic status
+  - 'Transportation: Car'
+  - Photographer
+  - Married
+  - Marketing Consultant
+  - 'Father: Taylor'
+  - 'Interest: Drawing'
   recipts_Player1_Turn4:
   - {fileID: 21300000, guid: d218bdb6001b4984ab30fee92a767cb0, type: 3}
   - {fileID: 0}
@@ -1138,8 +1080,17 @@ MonoBehaviour:
   recipts_Player2_Turn4:
   - {fileID: 21300000, guid: adc89ee672ae27b4cb40b06e5fc54a17, type: 3}
   - {fileID: 21300000, guid: 28f77f420a8f99f47b9688878fb0bcd6, type: 3}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: 88a22040191d3704ba61082094b7186e, type: 3}
   - {fileID: 21300000, guid: 594c059763fcd394ba377b59970fe275, type: 3}
+  variables_Turn4:
+  - Homosexual
+  - DragQueen
+  - 'Age: 52'
+  - 'Overweight '
+  - Jew
+  - 'Interest: Shopping'
+  - The Communist party
+  - 'Interest: Cooking'
 --- !u!4 &430450674
 Transform:
   m_ObjectHideFlags: 0
@@ -1294,12 +1245,16 @@ MonoBehaviour:
   slots: {fileID: 2109782371}
   recipts_Player1_Turn1: []
   recipts_Player2_Turn1: []
+  variables_Turn1: []
   recipts_Player1_Turn2: []
   recipts_Player2_Turn2: []
+  variables_Turn2: []
   recipts_Player1_Turn3: []
   recipts_Player2_Turn3: []
+  variables_Turn3: []
   recipts_Player1_Turn4: []
   recipts_Player2_Turn4: []
+  variables_Turn4: []
 --- !u!1 &891051099
 GameObject:
   m_ObjectHideFlags: 0
@@ -1829,7 +1784,6 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 156099304}
   - {fileID: 67707416}
   m_Father: {fileID: 785264546}
   m_RootOrder: 1

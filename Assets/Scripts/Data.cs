@@ -9,8 +9,6 @@ public static class Data {
     private static PersonModel personModel3;
     private static PersonModel personModel4;
 
-
-
     internal static PersonModel PersonModel1 {
         get {
             return personModel1;
@@ -51,4 +49,39 @@ public static class Data {
         }
     }
 
+    private static List<Sprite> reciptsPlayer1;
+    private static List<Sprite> reciptsPlayer2;
+    private static List<string> variables;
+
+    public static List<Sprite> ReciptsPlayer1 {
+        get {
+            return reciptsPlayer1;
+        }
+
+        set {
+            reciptsPlayer1 = value;
+        }
+    }
+
+    public static List<Sprite> ReciptsPlayer2 {
+        get {
+            return reciptsPlayer2;
+        }
+
+        set {
+            reciptsPlayer2 = value;
+        }
+    }
+
+    public static List<string> Variables {
+        get {
+            return variables;
+        }
+
+        set {
+            variables = value;
+        }
+    }
+
+    
 }

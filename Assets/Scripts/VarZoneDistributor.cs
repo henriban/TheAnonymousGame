@@ -65,12 +65,14 @@ public class VarZoneDistributor : MonoBehaviour {
 
 
     private void GeneratePersonVarList() {
-        personVars = new List<string>();
+        personVars = Data.Variables;
+
+        //personVars = new List<string>();
         
-        AddPersonStrVars(Data.PersonModel1);
-        AddPersonStrVars(Data.PersonModel2);
-        AddPersonStrVars(Data.PersonModel3);
-        AddPersonStrVars(Data.PersonModel4);
+        //AddPersonStrVars(Data.PersonModel1);
+        //AddPersonStrVars(Data.PersonModel2);
+        //AddPersonStrVars(Data.PersonModel3);
+        //AddPersonStrVars(Data.PersonModel4);
     }
 
     private void AddPersonStrVars(PersonModel personModel) {

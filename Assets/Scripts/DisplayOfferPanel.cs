@@ -14,6 +14,11 @@ public class DisplayOfferPanel : MonoBehaviour {
 
     private ColorBlock offerButtonColor;
 
+    private GameScript gameScript;
+    private DropZoneManager dropZoneManager;
+    private VarZoneDistributor varZoneDistributor;
+    private ReceiptDistributor receiptDistributor;
+
     void Start() {
         continueButton.onClick.AddListener(Continue);
 
@@ -21,12 +26,20 @@ public class DisplayOfferPanel : MonoBehaviour {
 
         offerButtonColor.normalColor = Color.gray;
         offerButton.GetComponent<Button>().colors = offerButtonColor;
+
+        gameScript = GameObject.Find("GameManger").GetComponent<GameScript>();
+        dropZoneManager = GameObject.Find("DropeZone").GetComponent<DropZoneManager>();
+        varZoneDistributor = GameObject.Find("VarZone").GetComponent<VarZoneDistributor>();
+        receiptDistributor = GameObject.Find("ReceiptContent").GetComponent<ReceiptDistributor>();
     }
 
     private void Continue() {
-        GameObject.Find("DropeZone").GetComponent<DropZoneManager>().SpawnNewTurnOfSlots();
-        GameObject.Find("VarZone").GetComponent<VarZoneDistributor>().NewTurn();
-        GameObject.Find("VarZone").GetComponent<VarZoneDistributor>().CheckOfferButton();
+        gameScript.GetNextTurn();
+        
+        dropZoneManager.SpawnNewTurnOfSlots();        
+        varZoneDistributor.NewTurn();
+        varZoneDistributor.CheckOfferButton();
+        receiptDistributor.NextTurnReceipts();
 
         ClickOfferPanel();
     }
