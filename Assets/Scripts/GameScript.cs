@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GameScript : MonoBehaviour {
@@ -7,9 +8,7 @@ public class GameScript : MonoBehaviour {
     public Person person2;
     public Person person3;
     public Person person4;
-
-    [SerializeField] Transform slots;
-
+    
     private int turn = 0;
 
     [Header("Turn 1 (Sam, Taylor, Jamie, Cameron)")]
@@ -35,13 +34,28 @@ public class GameScript : MonoBehaviour {
     // Use this for initialization
     void Start() {
 
-        Data.PersonModel1 = new PersonModel(person1);
-        Data.PersonModel2 = new PersonModel(person2);
-        Data.PersonModel3 = new PersonModel(person3);
-        Data.PersonModel4 = new PersonModel(person4);
-
+        Data.PersonModel1 = new PersonModel(person1, GenerateAllVariableList(0));
+        Data.PersonModel2 = new PersonModel(person2, GenerateAllVariableList(2));
+        Data.PersonModel3 = new PersonModel(person3, GenerateAllVariableList(4));
+        Data.PersonModel4 = new PersonModel(person4, GenerateAllVariableList(6));
+        
         GetNextTurn();
     }
+
+    private List<string> GenerateAllVariableList(int index) {
+        int index2 = index + 1;
+        return new List<string> {
+            variables_Turn1[index],
+            variables_Turn1[index2],
+            variables_Turn2[index],
+            variables_Turn2[index2],
+            variables_Turn3[index],
+            variables_Turn3[index2],
+            variables_Turn4[index],
+            variables_Turn4[index2]
+        };
+    }
+
 
     public void GetNextTurn() {
         turn++;

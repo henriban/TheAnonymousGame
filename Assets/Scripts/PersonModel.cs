@@ -49,9 +49,10 @@ class PersonModel {
         }
     }
 
-    public PersonModel(Person person) {
+    public PersonModel(Person person, List<string> allVariables) {
         this.Person = person;
-        AllVariables = getAllPersonVariables(person);
+        //AllVariables = getAllPersonVariables(person);
+        this.allVariables = allVariables;
         UnusedList = getAllPersonVariables(person);
         AlignedVariables = new List<string>();
     }
