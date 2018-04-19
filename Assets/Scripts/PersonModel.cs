@@ -19,14 +19,45 @@ class PersonModel {
         }
     }
 
+    public List<string> AlignedVariables {
+        get {
+            return alignedVariables;
+        }
+
+        set {
+            alignedVariables = value;
+        }
+    }
+
+    public List<string> AllVariables {
+        get {
+            return allVariables;
+        }
+
+        set {
+            allVariables = value;
+        }
+    }
+
+    public List<string> UnusedList {
+        get {
+            return unusedList;
+        }
+
+        set {
+            unusedList = value;
+        }
+    }
+
     public PersonModel(Person person) {
         this.Person = person;
-        unusedList = getAllPersonVariables(person);
-        alignedVariables = new List<string>();
+        AllVariables = getAllPersonVariables(person);
+        UnusedList = getAllPersonVariables(person);
+        AlignedVariables = new List<string>();
     }
 
     private List<string> getAllPersonVariables(Person person) {
-        allVariables = new List<string> {
+        return new List<string> {
             person.Jobb,
             person.Alder,
             person.Sivilstatus,
@@ -50,59 +81,40 @@ class PersonModel {
             person.Fødselssted,
             person.Sykdommer
         };
-
-        return allVariables;
     }
 
 
     public List<string> PickRandomVariables() {
         List<string> randomVariables = new List<string>();
 
-        string str1 = unusedList[(int)UnityEngine.Random.Range(0f, unusedList.Count - 1f)];
-        string str2 = unusedList[(int)UnityEngine.Random.Range(0f, unusedList.Count - 1f)];
-
+        string str1 = UnusedList[(int)UnityEngine.Random.Range(0f, UnusedList.Count - 1f)];
         randomVariables.Add(str1);
-        randomVariables.Add(str2);
+        UnusedList.Remove(str1);
 
-        unusedList.Remove(str1);
-        unusedList.Remove(str2);
+        string str2 = UnusedList[(int)UnityEngine.Random.Range(0f, UnusedList.Count - 1f)];
+        randomVariables.Add(str2);
+        UnusedList.Remove(str2);
 
         return randomVariables;
     }
 
-    public List<string> getAllVariables() {
-        return allVariables;
-    }
-
-    public List<string> getUnusedList() {
-        return unusedList;
-    }
-
-    public Person getPerson() {
-        return Person;
-    }
-
-    public List<string> getAlignedVariables() {
-        return alignedVariables;
-    }
-
     public void AddAlignedVariables(string str) {
-        alignedVariables.Add(str);
-    }
-
-    public void RemoveAlignedVariables(string str) {
-        if (alignedVariables.Contains(str)) {
-            alignedVariables.Remove(str);
-        }
+        AlignedVariables.Add(str);
     }
 
     public int getNumberOfMatch() {
         int i = 0;
 
-        foreach(string str in allVariables) {
-            if (alignedVariables.Contains(str)) {
+        foreach(string aligned in AlignedVariables) {
+            if (allVariables.Contains(aligned)) {
                 i++;
             }
+
+            //foreach (string var in AllVariables ) {
+            //    if (aligned.Equals(var)) {
+            //        i++;
+            //    }
+            //}
         }
 
         return i;

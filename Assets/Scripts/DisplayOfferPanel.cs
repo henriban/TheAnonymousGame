@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class DisplayOfferPanel : MonoBehaviour {
-
+    
     public GameObject offerPanel;
     public Button offerButton;
     public Button continueButton;
