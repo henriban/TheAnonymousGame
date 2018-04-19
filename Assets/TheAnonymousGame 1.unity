@@ -2106,9 +2106,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   varZonePanel: {fileID: 1863885390}
-  variableSlot: {fileID: 1592195501223760, guid: 86f56da7cbe1c564c9546b9753c106a9,
+  variableSlot: {fileID: 1380350879045196, guid: ea8fc218b3df2a04892b8920d6254a59,
     type: 2}
-  var_prefab: {fileID: 1814639777482300, guid: 86f56da7cbe1c564c9546b9753c106a9, type: 2}
+  var_prefab: {fileID: 1070856381239466, guid: ea8fc218b3df2a04892b8920d6254a59, type: 2}
 --- !u!114 &1930603157 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114199103907567932, guid: d0de638f5aa1e6643813d12d2cd07dcf,
