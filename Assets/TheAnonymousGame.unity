@@ -1061,7 +1061,7 @@ MonoBehaviour:
   recipts_Player2_Turn3:
   - {fileID: 21300000, guid: 5c76146b8903b4246936af280a825e9b, type: 3}
   - {fileID: 21300000, guid: 2320f7e9638ed3b40bf23dc8bdab5c93, type: 3}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: f2eaf5069c291a04a9318c52113cedc9, type: 3}
   - {fileID: 21300000, guid: 2db1d759fc221cc4da1dd922d40f9797, type: 3}
   variables_Turn3:
   - The Environment Party
@@ -1074,14 +1074,14 @@ MonoBehaviour:
   - 'Interest: Drawing'
   recipts_Player1_Turn4:
   - {fileID: 21300000, guid: d218bdb6001b4984ab30fee92a767cb0, type: 3}
-  - {fileID: 0}
-  - {fileID: 21300000, guid: dd8758b33771a9d48a10677481b45ba5, type: 3}
+  - {fileID: 21300000, guid: 71d1c7499b311a54ba804425b3031200, type: 3}
+  - {fileID: 21300000, guid: b77e86213b02a574a826cb44692cf14e, type: 3}
   - {fileID: 21300000, guid: 2db1d759fc221cc4da1dd922d40f9797, type: 3}
   recipts_Player2_Turn4:
-  - {fileID: 21300000, guid: adc89ee672ae27b4cb40b06e5fc54a17, type: 3}
+  - {fileID: 21300000, guid: 700505f509f8e914683bf0f22b8009bc, type: 3}
   - {fileID: 21300000, guid: 28f77f420a8f99f47b9688878fb0bcd6, type: 3}
-  - {fileID: 21300000, guid: 88a22040191d3704ba61082094b7186e, type: 3}
-  - {fileID: 21300000, guid: 594c059763fcd394ba377b59970fe275, type: 3}
+  - {fileID: 21300000, guid: 38d7fe30cd1fa254c9a2b10e31c0e707, type: 3}
+  - {fileID: 21300000, guid: c57cac3f3578c9747a655fcbe8ca8d82, type: 3}
   variables_Turn4:
   - Homosexual
   - DragQueen
