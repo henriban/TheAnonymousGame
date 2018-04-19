@@ -9,6 +9,7 @@ TagManager:
   - Slot2
   - Slot3
   - Slot4
+  - VariableTag
   layers:
   - Default
   - TransparentFX
