@@ -56,30 +56,31 @@ public class GameScript : MonoBehaviour {
         };
     }
 
-
-    public void GetNextTurn() {
+    public bool GetNextTurn() {
         turn++;
         switch (turn) {
             case 1:
                 Data.ReciptsPlayer1 = recipts_Player1_Turn1;
                 Data.ReciptsPlayer2 = recipts_Player2_Turn1;
                 Data.Variables = variables_Turn1;
-                break;
+                return true;
             case 2:
                 Data.ReciptsPlayer1 = recipts_Player1_Turn2;
                 Data.ReciptsPlayer2 = recipts_Player2_Turn2;
                 Data.Variables = variables_Turn2;
-                break;
+                return true;
             case 3:
+                GameObject.Find("ScrollDropZone").GetComponent<UnityEngine.UI.ScrollRect>().enabled = true;
                 Data.ReciptsPlayer1 = recipts_Player1_Turn3;
                 Data.ReciptsPlayer2 = recipts_Player2_Turn3;
                 Data.Variables = variables_Turn3;
-                break;
+                return true;
             case 4:
                 Data.ReciptsPlayer1 = recipts_Player1_Turn4;
                 Data.ReciptsPlayer2 = recipts_Player2_Turn4;
                 Data.Variables = variables_Turn4;
                 break;
         }
+        return false;
     }
 }

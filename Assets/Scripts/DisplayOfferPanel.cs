@@ -18,6 +18,7 @@ public class DisplayOfferPanel : MonoBehaviour {
     private DropZoneManager dropZoneManager;
     private VarZoneDistributor varZoneDistributor;
     private ReceiptDistributor receiptDistributor;
+    private OfferResultDisplay offerResultDisplay;
 
     void Start() {
         continueButton.onClick.AddListener(Continue);
@@ -31,15 +32,19 @@ public class DisplayOfferPanel : MonoBehaviour {
         dropZoneManager = GameObject.Find("DropeZone").GetComponent<DropZoneManager>();
         varZoneDistributor = GameObject.Find("VarZone").GetComponent<VarZoneDistributor>();
         receiptDistributor = GameObject.Find("ReceiptContent").GetComponent<ReceiptDistributor>();
+        offerResultDisplay = GameObject.Find("GameManger").GetComponent<OfferResultDisplay>();
     }
 
     private void Continue() {
-        gameScript.GetNextTurn();
-        
-        dropZoneManager.SpawnNewTurnOfSlots();        
-        varZoneDistributor.NewTurn();
-        varZoneDistributor.CheckOfferButton();
-        receiptDistributor.NextTurnReceipts();
+        if (gameScript.GetNextTurn()) {
+            dropZoneManager.SpawnNewTurnOfSlots();
+            varZoneDistributor.NewTurn();
+            varZoneDistributor.CheckOfferButton();
+            receiptDistributor.NextTurnReceipts();
+        }
+        else {
+            // GAME OVER
+        }
 
         ClickOfferPanel();
     }
@@ -51,6 +56,7 @@ public class DisplayOfferPanel : MonoBehaviour {
 
     public void SetOfferButtonClickable() {
         readyToShowPanel = true;
+        offerResultDisplay.RefreshDisplay();
         UpdateOfferButton();
     }
 

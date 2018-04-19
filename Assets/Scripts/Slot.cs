@@ -14,8 +14,12 @@ public class Slot : MonoBehaviour, IDropHandler {
 
     public void OnDrop(PointerEventData eventData) {
 
-        if (!item) {   
-            DragHandler.itemBeingDraged.transform.SetParent(transform);
+        if (!item) {
+            // Need a check because scroll view... 
+            if (DragHandler.itemBeingDraged != null) {
+                DragHandler.itemBeingDraged.transform.SetParent(transform);
+            }
+            
             //ExecuteEvents.ExecuteHierarchy<IHasChanged>(gameObject, null, (x, y) => x.HasChanged());
          	
 			if (gameObject.transform.parent.GetComponent<DropZoneManager> () != null) {

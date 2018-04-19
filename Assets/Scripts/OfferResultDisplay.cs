@@ -35,7 +35,7 @@ public class OfferResultDisplay : MonoBehaviour {
 
     private string GenerateProsent(PersonModel person) {
         if(person.getNumberOfMatch() > 0 && person.AlignedVariables.Count > 0) {
-            float x = person.getNumberOfMatch() / person.AlignedVariables.Count;
+            float x = (float) person.getNumberOfMatch() / (float) person.AlignedVariables.Count;
             return Randomenize((int)(x > 0 ? x * 100 : 0)) + "%";
         }
         return Randomenize(0) + "%";
@@ -47,6 +47,9 @@ public class OfferResultDisplay : MonoBehaviour {
             num -= (int)Random.Range(0f, 4f);
         }else if(num == 0) {
             num += (int)Random.Range(0f, 6f);
+        }
+        else if (num == 66) {
+            num += (int)Random.Range(0f, 15f);
         }
         else {
             num += (int)Random.Range(-10f, 10f);

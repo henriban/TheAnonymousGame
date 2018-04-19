@@ -99,10 +99,12 @@ public class VarZoneDistributor : MonoBehaviour {
     }
 
     private void PopulateVariableSlots() {
-        System.Random rand = new System.Random();
-        personVars.OrderBy(c => rand.Next()).ToList();
+        //System.Random rand = new System.Random();
+        //personVars.OrderBy(c => rand.Next()).ToList();
 
-        for(int i = 0; i < variableSlotList.Count; i++) {
+        personVars.Sort((a, b) => 1 - 2 * Random.Range(0, Random.Range(0, 8)));
+
+        for (int i = 0; i < variableSlotList.Count; i++) {
             Transform var = variableSlotList[i].transform.GetChild(0);
             
             var.transform.name = "var" + global_id;
@@ -124,7 +126,7 @@ public class VarZoneDistributor : MonoBehaviour {
         }
     }
 
-    //Check if it variable left in the VarZone
+    //Check if its variables left in the VarZone
     private bool IsOfferButtonClikable() {
         foreach(GameObject slot in variableSlotList) {
             if(slot.transform.childCount > 0) {
