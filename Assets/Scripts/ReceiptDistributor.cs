@@ -14,7 +14,18 @@ public class ReceiptDistributor : MonoBehaviour {
     private List<Sprite> images;
     private List<string> recieptOwnerNames = new List<string> { "Sam", "Taylor", "Jamie", "Cameron" };
 
-    public int player = 1;
+    private int player = 1;
+
+    public int Player {
+        get {
+            return player;
+        }
+
+        set {
+            player = value;
+            NextTurnReceipts();
+        }
+    }
 
     void Start() {
         SetPlayerReceipts();

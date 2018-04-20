@@ -18,13 +18,13 @@ public class AddPing : MonoBehaviour {
 	
 	void TaskOnClick()
     {
-        Debug.Log("Was called");
+        //Debug.Log("Was called");
         GameObject t = transform.parent.parent.Find("Ping1").gameObject;
-        Debug.Log(t.name);
+        //Debug.Log(t.name);
         if(btnClicked == 0)
         {
-            Debug.Log("Sprite should be changed");
-            Debug.Log(check == null);
+            //Debug.Log("Sprite should be changed");
+            //Debug.Log(check == null);
             t.GetComponent<Image>().sprite = check;
 
             Color c = t.GetComponent<Image>().color;
