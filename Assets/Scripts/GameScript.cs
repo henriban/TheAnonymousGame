@@ -1,15 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameScript : MonoBehaviour {
+
+    public Button restartButton;
 
     public Person person1;
     public Person person2;
     public Person person3;
     public Person person4;
     
-    private int turn = 0;
+    public int turn = 0;
 
     [Header("Turn 1 (Sam, Taylor, Jamie, Cameron)")]
     public List<Sprite> recipts_Player1_Turn1;
@@ -33,6 +37,8 @@ public class GameScript : MonoBehaviour {
 
     // Use this for initialization
     void Start() {
+
+        restartButton.onClick.AddListener(RestartGame);
 
         Data.PersonModel1 = new PersonModel(person1, GenerateAllVariableList(0));
         Data.PersonModel2 = new PersonModel(person2, GenerateAllVariableList(2));
@@ -79,8 +85,16 @@ public class GameScript : MonoBehaviour {
                 Data.ReciptsPlayer1 = recipts_Player1_Turn4;
                 Data.ReciptsPlayer2 = recipts_Player2_Turn4;
                 Data.Variables = variables_Turn4;
-                break;
+                return true;
+            case 5:
+
+                return false;
         }
         return false;
+    }
+
+    public void RestartGame() {
+        
+        SceneManager.LoadScene("TheAnonymousGame");
     }
 }

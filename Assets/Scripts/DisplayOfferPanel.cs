@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class DisplayOfferPanel : MonoBehaviour {
     
     public GameObject offerPanel;
+    public GameObject endChat;
+
     public Button offerButton;
     public Button continueButton;
 
@@ -42,9 +44,13 @@ public class DisplayOfferPanel : MonoBehaviour {
             varZoneDistributor.CheckOfferButton();
             receiptDistributor.NextTurnReceipts();
         }
-        else {
+        
+        if(gameScript.turn == 5) {
             // GAME OVER
+            endChat.SetActive(true);
         }
+            
+        
 
         ClickOfferPanel();
     }

@@ -9,6 +9,8 @@ public class ShowPlayer : MonoBehaviour {
     public Button player1Button;
     public Button player2Button;
 
+    public Text playerNameText;
+
     private ColorBlock colorPlayer1Button;
     private ColorBlock colorPlayer2Button;
 
@@ -27,6 +29,7 @@ public class ShowPlayer : MonoBehaviour {
         colorPlayer2Button.normalColor = Color.gray;
         player2Button.GetComponent<Button>().colors = colorPlayer2Button;
 
+        playerNameText.text = "Player 2";
 
         receiptDistributor = GameObject.Find("ReceiptContent").GetComponent<ReceiptDistributor>();
     }
@@ -34,6 +37,7 @@ public class ShowPlayer : MonoBehaviour {
     private void PlayerButton1Pressed() {
         
         receiptDistributor.Player = 1;
+        playerNameText.text = "Player 2";
 
         colorPlayer1Button.normalColor = Color.white;
         player1Button.GetComponent<Button>().colors = colorPlayer1Button;
@@ -45,7 +49,8 @@ public class ShowPlayer : MonoBehaviour {
 
     private void PlayerButton2Pressed() {
         receiptDistributor.Player = 2;
-            
+        playerNameText.text = "Player 1";
+
         colorPlayer1Button.normalColor = Color.gray;
         player1Button.GetComponent<Button>().colors = colorPlayer1Button;
 
